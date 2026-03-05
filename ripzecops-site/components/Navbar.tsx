@@ -52,18 +52,7 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <div className="hidden sm:block">
-            <FxToggle />
-          </div>
-
-          <a
-            href={buildWaLink()}
-            target="_blank"
-            rel="noreferrer"
-            className="glow-btn"
-          >
-            Chat on WhatsApp
-          </a>
+          <FxToggle />
         </div>
       </div>
     </div>

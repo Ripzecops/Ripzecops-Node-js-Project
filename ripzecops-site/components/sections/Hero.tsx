@@ -99,10 +99,34 @@ export default function Hero() {
               <Typewriter text="WITH FULL SUPPORT" delay={1.4} />
             </h1>
 
-            <p ref={subtitleRef} className="mt-8 max-w-2xl text-lg text-zinc-300 sm:text-xl md:mx-0 mx-auto leading-relaxed font-medium">
-              We specialize in delivering high-end, production-ready IT solutions.
-              From AI agents to complex web systems, we bridge the gap between concept and code.
-            </p>
+            <motion.p
+              ref={subtitleRef}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="mt-8 max-w-2xl text-lg text-zinc-300 sm:text-2xl md:mx-0 mx-auto font-body leading-relaxed font-bold tracking-tight"
+            >
+              {"Architecting high-end IT systems. AI Agents. Web Core. Digital Security.".split("").map((char, i) => (
+                <motion.span
+                  key={i}
+                  initial={{ opacity: 0, y: -20, filter: "blur(10px)" }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                    filter: "blur(0px)",
+                    transition: { delay: 1.8 + i * 0.02, duration: 0.8 }
+                  }}
+                  whileHover={{
+                    y: 10,
+                    color: "#00d2ff",
+                    filter: "blur(2px)",
+                    transition: { duration: 0.3 }
+                  }}
+                  className="inline-block"
+                >
+                  {char === " " ? "\u00A0" : char}
+                </motion.span>
+              ))}
+            </motion.p>
 
             <div className="mt-10 flex flex-col gap-6 sm:flex-row justify-center md:justify-start items-center">
               <a

@@ -56,11 +56,9 @@ export default function Navbar() {
           </div>
         </nav>
 
-        {/* Global FX Toggle (Mobile Landscape) */}
+        {/* Global FX Toggle (Visible on all mobile screens) */}
         <div className="xl:hidden flex items-center gap-4">
-          <div className="landscape:block hidden">
-            <FxToggle />
-          </div>
+          <FxToggle />
         </div>
 
         {/* Advanced Radial Menu (90 degree quadrant) */}

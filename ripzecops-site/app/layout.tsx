@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sora, Inter, Poppins } from "next/font/google";
+import { Outfit, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Providers from "@/app/providers";
 import { BRAND } from "@/lib/config";
@@ -7,20 +7,14 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
-const sora = Sora({
+const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-heading",
 });
 
-const inter = Inter({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-body",
-});
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  variable: "--font-button",
-  weight: ["600"],
 });
 
 export const metadata: Metadata = {
@@ -43,7 +37,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${sora.variable} ${inter.variable} ${poppins.variable} antialiased`}>
+      <body className={`${spaceGrotesk.className} ${outfit.variable} ${spaceGrotesk.variable} antialiased`}>
         <Providers>
           <Navbar />
           <main>{children}</main>

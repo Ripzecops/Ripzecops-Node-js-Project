@@ -1,5 +1,6 @@
 export const BRAND = {
   name: "RIPZECOPS",
+  whatsappNumber: "94742591795",
   whatsappNumberDisplay: "0742591795",
   whatsappWaMe: "https://wa.me/94742591795",
   whatsappPrefill:

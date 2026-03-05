@@ -177,8 +177,8 @@ export default function IronManHeroScene() {
 
                 <SlashLights />
                 <Sparks />
-                <TechCharacter />
-                <FloatingLogo />
+                {/* <TechCharacter /> */}
+                {/* <FloatingLogo /> */}
             </Canvas>
         </div>
     );

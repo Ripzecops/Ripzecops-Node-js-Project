@@ -12,6 +12,7 @@ import { OFFERS } from "@/lib/config";
 import { useFx } from "@/lib/providers/FxProvider";
 import { usePrefersReducedMotion } from "@/lib/hooks/usePrefersReducedMotion";
 import Image from "next/image";
+import Typewriter from "@/components/Typewriter";
 
 const GlobeBadge = dynamic(() => import("@/components/three/GlobeBadge"), { ssr: false });
 const IronManHeroScene = dynamic(() => import("@/components/three/IronManHeroScene"), { ssr: false });
@@ -88,9 +89,14 @@ export default function Hero() {
 
             <h1
               ref={titleRef}
-              className="text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-7xl drop-shadow-2xl title-text"
+              className="text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-7xl drop-shadow-2xl title-text uppercase"
             >
-              PREMIUM IT <span className="text-arc-400 heading-glow italic">PROJECT SERVICES</span> WITH FULL SUPPORT
+              <Typewriter text="PREMIUM IT " />
+              <span className="text-arc-400 heading-glow italic">
+                <Typewriter text="PROJECT SERVICES" delay={0.6} />
+              </span>
+              <br />
+              <Typewriter text="WITH FULL SUPPORT" delay={1.4} />
             </h1>
 
             <p ref={subtitleRef} className="mt-8 max-w-2xl text-lg text-zinc-300 sm:text-xl md:mx-0 mx-auto leading-relaxed font-medium">
